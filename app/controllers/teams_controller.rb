@@ -17,4 +17,14 @@ class TeamsController < ApplicationController
     team.save
     render json: team
   end
+
+  def update
+    team = Team.find_by(id: params[:id])
+    team.name = params[:name] || team.name
+    team.wins = params[:wins] || team.wins
+    team.loses = params[:loses] || team.loses
+    team.save
+    render json: team
+  end
+
 end
