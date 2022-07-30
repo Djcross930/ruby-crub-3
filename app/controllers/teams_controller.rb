@@ -9,4 +9,12 @@ class TeamsController < ApplicationController
     render json: team
   end
 
+  def create
+    team = Team.new
+    team.name = params[:name]
+    team.wins = params[:wins]
+    team.loses = params[:loses]
+    team.save
+    render json: team
+  end
 end
