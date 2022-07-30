@@ -24,3 +24,6 @@ Content-Type: application/json
   "wins": 12,
   "loses": 4
 }
+
+###
+DELETE http://localhost:3000/teams/4

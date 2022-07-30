@@ -26,5 +26,11 @@ class TeamsController < ApplicationController
     team.save
     render json: team
   end
-
+  
+  def destroy
+    team = Team.find_by(id: params[:id])
+    team.destroy
+    render json: Team.all
+  end
+  
 end
